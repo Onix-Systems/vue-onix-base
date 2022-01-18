@@ -3,8 +3,9 @@ import { RouteRecordRaw } from "vue-router";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Home",
-    component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue"),
+    name: "Landing",
+    component: () =>
+      import(/* webpackChunkName: "landing" */ "../views/Landing.vue"),
   },
   {
     path: "/login",
