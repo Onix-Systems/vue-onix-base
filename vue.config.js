@@ -5,5 +5,8 @@ module.exports = {
     msTileColor: "#000000",
     appleMobileWebAppCapable: "yes",
     appleMobileWebAppStatusBarStyle: "black",
+    workboxOptions: {
+      exclude: [/index\.html$/],
+    },
   },
 };
