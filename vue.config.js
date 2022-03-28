@@ -9,4 +9,13 @@ module.exports = {
       exclude: [/index\.html$/],
     },
   },
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: `
+         @import '~@/scss/_colors.scss';
+         `,
+      },
+    },
+  },
 };
