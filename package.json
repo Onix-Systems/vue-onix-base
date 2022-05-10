@@ -36,6 +36,7 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-standard": "^6.1.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^2.0.0-0",
     "eslint": "^6.7.2",
@@ -62,10 +63,12 @@
       "@vue/prettier",
       "@vue/prettier/@typescript-eslint"
     ],
+    "rules": {
+      "vue/script-setup-uses-vars": "error"
+    },
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {},
     "overrides": [
       {
         "files": [
