@@ -37,18 +37,19 @@ onBeforeUnmount(() => {
 
 <style lang="scss" scoped>
 .modal {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   &--backdrop {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     background-color: #000000;
     top: 0;
@@ -57,9 +58,9 @@ onBeforeUnmount(() => {
   }
 
   &--container {
-    height: 100%;
+    max-height: 100%;
     overflow-y: auto;
-    padding: 40px 10px;
+    padding: 10px;
     z-index: 11;
   }
 
