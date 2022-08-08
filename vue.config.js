@@ -1,4 +1,6 @@
-module.exports = {
+const { defineConfig } = require("@vue/cli-service");
+module.exports = defineConfig({
+  transpileDependencies: true,
   pwa: {
     name: "OnixBase",
     themeColor: "#FFFFFF",
@@ -12,10 +14,10 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        prependData: `
+        additionalData: `
          @import '~@/scss/_colors.scss';
          `,
       },
     },
   },
-};
+});
