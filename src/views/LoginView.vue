@@ -1,4 +1,6 @@
-<template lang="pug"></template>
+<template lang="pug">
+h1 Login
+</template>
 
 <script lang="ts" setup></script>
 
