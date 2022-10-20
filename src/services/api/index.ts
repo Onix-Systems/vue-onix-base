@@ -14,7 +14,6 @@ const axiosClient = axios.create({
     "Content-Type": "application/json",
   },
 });
-const userStore = useUserStore();
 let subscribers: Subscriber[] = [];
 let isRefreshing = false;
 
@@ -28,6 +27,7 @@ function subscribeTokenRefresh(cb: Subscriber): void {
 
 axiosClient.interceptors.request.use(
   (request) => {
+    const userStore = useUserStore();
     if (request.headers && userStore.accessToken) {
       request.headers.Authorization = `Bearer ${userStore.accessToken}`;
     }
@@ -43,6 +43,7 @@ axiosClient.interceptors.response.use(
     return response;
   },
   function (error) {
+    const userStore = useUserStore();
     const originalRequest = error.config;
     const refreshToken: string | null = userStore.refreshToken;
     if (error.response.status === 401) {
