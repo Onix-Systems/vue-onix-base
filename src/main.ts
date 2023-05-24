@@ -8,6 +8,7 @@ import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import { PiniaSharedState } from "pinia-shared-state";
 import * as Sentry from "@sentry/vue";
 import { Integrations } from "@sentry/tracing";
+import "broadcastchannel-polyfill";
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
